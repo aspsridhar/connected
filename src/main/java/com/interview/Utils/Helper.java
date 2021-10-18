@@ -100,7 +100,7 @@ public class Helper {
 				tokenizer = new StringTokenizer(line, ",");
 				Set<String> hash_Set = new HashSet<String>();
 				while (tokenizer.hasMoreElements()) {
-					String element = tokenizer.nextElement().toString();
+                                        String element = tokenizer.nextElement().toString().trim();
 					hash_Set.add(element);
 				}
 				cities.add(hash_Set);

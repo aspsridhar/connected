@@ -35,13 +35,11 @@ public class Helper {
 	 * @param error
 	 */
 	public static void appUsage(String error) {
-		if (error.isEmpty()) {
 			System.out.println("Usage: ");
 			System.out.println("Connected <fileName.txt> <city-name1> <city-name2> ");
 			System.out.println("Error===: " + error);
 			// throw new IllegalArgumentException("three args required , arg1 should be
 			// filename.txt arg2 should be city1 arg3 should be city2");
-		}
 	}
 
 	/**
@@ -52,14 +50,13 @@ public class Helper {
 	public static void validate(ConnectedObj argParameters) {
 
 		if (!argParameters.getFileName().contains(".txt"))
-			error = error + " arg[0] should be file name";
+                    appUsage("arg[0] should be file name");
 
 		if (isNumeric(argParameters.getFrom()))
-			error = error + " arg[1] should be city name";
+                    appUsage("arg[1] should be city name");
 
 		if (isNumeric(argParameters.getTo()))
-			error = error + " arg[2] should be city name";
-		appUsage(error);
+                    appUsage("arg[1] should be city name");
 
 	}
 
